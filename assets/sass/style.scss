@@ -1,14 +1,30 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Gilroy", sans-serif;
-}
-
-body {
+    font-family: "DM Sans", sans-serif;
     box-sizing: border-box;
 }
 
 a {
     color: unset;
     text-decoration: none;
+}
+
+@import"sections/_assets.scss";
+@import"sections/_header.scss";
+@import"sections/_home.scss";
+@import"sections/_benefits.scss";
+@import"sections/_about.scss";
+@import"sections/_services.scss";
+@import"sections/_work.scss";
+
+* {
+    color: $dark-text-color;
+}
+
+a {
+    transition: .2s color;
+    &:hover {
+        color: $primary-color;
+    }
 }

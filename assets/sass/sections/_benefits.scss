@@ -1,0 +1,27 @@
+.benefits {
+    overflow: hidden;
+    background-color: $primary-color;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        @media (min-width: 979px) {
+            padding: 30px 0;
+        }
+    }
+
+    &__item {
+        white-space: nowrap;
+        color: $light-text-color;
+        font-size: 30px;
+        margin-right: 30px;
+        letter-spacing: -1.2px;
+
+        @media (min-width: 979px) {
+            font-size: 59.8px;
+            margin-right: 70px;
+            line-height: 57.6px;
+        }
+    }
+}
