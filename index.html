@@ -29,20 +29,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
     <link rel="stylesheet" href="assets/font/fontello.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="preload" as="image" href="assets/img/bg.webp" type="image/jpeg">
 </head>
 <body>
     <header class="header">
@@ -90,7 +83,7 @@
                     <a class="about__button btn btn-bold" href="#contact">Get a quote</a>
                 </div>
                 <div class="about__image">
-                    <img src="assets/img/reliable-solutions.webp" alt="Reliable Solutions at Competitive Prices">
+                    <img src="assets/img/reliable-solutions.webp" alt="Reliable Solutions at Competitive Prices" loading="lazy">
                     <div class="about__phone info-block">
                         <div class="info-block__icon"><i class="icon-phone"></i></div>
                         <div class="info-block__wrapper">
@@ -150,8 +143,8 @@
                     <p class="work__descr">We take pride in every project, delivering top-quality craftsmanship, efficiency, and attention to detail. From demolitions to full-scale rebuilds, mold remediation to junk removal, our team ensures every job is completed safely and professionally. Browse our past work and see the difference we make!</p>
                 </div>
                 <div class="work__arrows">
-                    <button class="slick-prev"><i class="icon-arrow-left"></i></button>
-                    <button class="slick-next"><i class="icon-arrow-right"></i></button>
+                    <button class="slick-prev" aria-label="Next item"><i class="icon-arrow-left"></i></button>
+                    <button class="slick-next" aria-label="Previous item"><i class="icon-arrow-right"></i></button>
                 </div>
             </div>
             <div class="work__images">
@@ -165,7 +158,10 @@
                     <img src="assets/img/work/work-3.webp" alt="Our Work 3" loading="lazy">
                 </div>
                 <div class="work__image">
-                    <img src="assets/img/work/work-3.webp" alt="Our Work 3" loading="lazy">
+                    <img src="assets/img/work/work-4.webp" alt="Our Work 4" loading="lazy">
+                </div>
+                <div class="work__image">
+                    <img src="assets/img/work/work-5.webp" alt="Our Work 5" loading="lazy">
                 </div>
             </div>
         </section>
@@ -191,7 +187,7 @@
                     </div>
                 </div>
                 <div class="whyus__image">
-                    <img src="assets/img/whyus.webp" alt="Why choosing us">
+                    <img src="assets/img/whyus.webp" alt="Why choosing us" loading="lazy">
                 </div>
             </div>
         </section>
@@ -246,7 +242,7 @@
             <div class="footer__inner">
                 <div class="footer__column">
                     <a href="#home" class="footer__logo">
-                        <img src="assets/img/footer-logo.svg" alt="Romer Holding Logo">
+                        <img src="assets/img/footer-logo.svg" alt="Romer Holding Logo" loading="lazy">
                     </a>
                     <p class="footer__descr">We are a construction firm that specializes in demolition, rebuilding, mold remediation, and junk removal. With years of experience and a commitment to quality, we deliver efficient, reliable, and eco-friendly solutions to meet our clients’ needs.</p>
                 </div>

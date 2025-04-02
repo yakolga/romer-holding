@@ -70,14 +70,14 @@
         @media (min-width: 979px) {
             flex-direction: row;
             gap: 163px;
-        }
 
-        > div:first-child {
-            max-width: 457px;
-        }
-
-        > div:nth-child(2) {
-            max-width: 240px;
+            > div:first-child {
+                max-width: 457px;
+            }
+    
+            > div:nth-child(2) {
+                max-width: 240px;
+            }
         }
     }
 }
