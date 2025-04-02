@@ -49,11 +49,6 @@
             transition: all 0.2s ease-in-out;
         }
 
-        &:placeholder {
-            color: #D0D0D0;
-            font-size: 16px;
-        }
-
         &.error {
             border: 1px solid red;
         }
@@ -151,13 +146,21 @@
     }
 
     &__type {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         margin-right: 23px;
+
+        @media (min-width: 979px) {
+            font-size: 20px;
+        }
     }
 
     &__link {
-        font-size: 20px;
+        font-size: 16px;
+
+        @media (min-width: 979px) {
+            font-size: 20px;
+        }
     }
 
     &__wrapper {
@@ -204,11 +207,21 @@
         color: $light-text-color;
         font-weight: 500;
         width: 100%;
-        // display: none;
+        display: none;
 
         @media (min-width: 979px) {
             grid-column-start: 1;
             grid-column-end: 3;
         }
+    }
+
+    input::placeholder {
+        font-size: 16px;
+        color: #D0D0D0;
+    }
+
+    textarea::placeholder {
+        font-size: 16px;
+        color: #D0D0D0;
     }
 }
