@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', checkScroll);
+    toggleMobileMenu();
+
     $('.benefits__inner').slick({
         arrows: false,
         dots: false,
@@ -42,18 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     });
 
-    const header = document.querySelector('header');
-
-    function checkScroll() {
-    if (window.scrollY > header.offsetHeight) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-    }
-
-    window.addEventListener('scroll', checkScroll);
-
     $('.work__images').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -83,4 +74,91 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         ]
     });
+
+    validateForms('.contact__form', 'Please enter your name', 'Please enter your phone number', 'Please enter your E-mail address', 'Please fill in all required fields');
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+      
+        if (!$(this).valid()) {
+          return;
+        }
+      
+        var $form = $(this);
+        $.ajax({
+          type: "POST",
+          url: "assets/mailer/smart.php",
+          data: $form.serialize()
+        }).done(function() {
+          $form.find("input").val("");
+          $('.contact__success').fadeIn('slow');
+      
+          setTimeout(function() {
+            $('.contact__success').fadeOut('slow');
+          }, 10000);
+      
+          $form.trigger('reset');
+        });
+        return false;
+    });
+
+    AOS.init({
+        duration: 1000,
+        delay: 300,
+        once: true,
+    });
 });
+
+function checkScroll() {
+    const header = document.querySelector('header');
+    
+    if (window.scrollY > header.offsetHeight) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
+function toggleMobileMenu() {
+    const hamburger = document.querySelector('.header__hamburger'),
+        header = document.querySelector('.header'),
+        headerClose = document.querySelector('.header__close');
+
+    hamburger.addEventListener('click', function() {
+        header.classList.add('--open');
+    });
+
+    headerClose.addEventListener('click', function() {
+        header.classList.remove('--open');
+    });
+
+    const links = document.querySelectorAll('.header__nav a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            header.classList.remove('--open');
+        });
+    });
+}
+
+function validateForms(form, name, phone, email, privacypolicy) {
+    $(form).validate({
+    rules: {
+    name: {
+        required: true,
+        minlength: 2
+    },
+    phone: "required",
+    email: {
+        required: true,
+        email: true
+    },
+    privacypolicy: "required"
+    },
+    messages: {
+      name: name,
+      phone: phone,
+      email: email,
+      privacypolicy: privacypolicy
+    }
+  });
+};

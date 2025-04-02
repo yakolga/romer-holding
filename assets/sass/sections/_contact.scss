@@ -1,0 +1,214 @@
+.contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #EFEFEF;
+
+    @media (min-width: 979px) {
+        margin-top: 120px;
+        margin-bottom: 120px;
+        border-radius: 20px;
+        padding: 57.5px 40px;
+    }
+
+    &__form {
+        display: grid;
+        background-color: #FFFFFF;
+        padding: 15px;
+        border-radius: 20px;
+        gap: 20px;
+        position: relative;
+
+        @media (min-width: 979px) {
+            padding: 30px 20px;
+            max-width: 665px;
+            width: 100%;
+            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__label {
+        font-size: 26px;
+        font-weight: 600;
+       
+        @media (min-width: 979px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &__input {
+        height: 53px;
+        border-radius: 20px;
+        border: 1px solid #D0D0D0;
+        padding: 20px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $primary-color;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:placeholder {
+            color: #D0D0D0;
+            font-size: 16px;
+        }
+
+        &.error {
+            border: 1px solid red;
+        }
+    }
+
+    &__textarea {
+        border: 1px solid #D0D0D0;
+        border-radius: 20px;
+        padding: 20px;
+        min-height: 153px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $primary-color;
+            transition: all 0.2s ease-in-out;
+        }
+
+        @media (min-width: 979px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        border: none;
+
+        @media (min-width: 979px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media (min-width: 979px) {
+            flex-direction: row;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+            > div {
+                width: 50%;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 40px;
+        font-weight: 700;
+
+        @media (min-width: 979px) {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__descr {
+        color: $dark-text-color;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    &__info {
+       margin-top: 20px;
+       display: flex;
+       align-items: center;
+       background-color: #FFF; 
+       padding: 23px 30px;
+       border-radius: 20px;
+       border: 1px solid #D0D0D0;
+       gap: 23px;
+    }
+
+    &__icon {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-text-color;
+        border-radius: 100%;
+
+        i {
+            color: $primary-color;
+            font-size: 20px;
+            
+            &:before {
+                margin: 0;
+                width: unset;
+            }
+        }
+    }
+
+    &__type {
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 23px;
+    }
+
+    &__link {
+        font-size: 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 979px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (min-width: 979px) {
+            max-width: 603px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+
+        label.error {
+            font-size: 12px;
+            color: red;
+            margin-top: .5rem;
+        }
+
+        @media (min-width: 979px) {
+            &-phone, &-message{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    }
+
+    &__success {
+        background-color: $dark-text-color;
+        padding: 20px;
+        font-size: 20px;
+        color: $light-text-color;
+        font-weight: 500;
+        width: 100%;
+        // display: none;
+
+        @media (min-width: 979px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}

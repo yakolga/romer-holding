@@ -10,6 +10,17 @@ a {
     text-decoration: none;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 51px;
+
+    @media (max-width: 979px) {
+        scroll-padding: 70px;
+    }
+}
+
+
 @import"sections/_assets.scss";
 @import"sections/_header.scss";
 @import"sections/_home.scss";
@@ -17,6 +28,10 @@ a {
 @import"sections/_about.scss";
 @import"sections/_services.scss";
 @import"sections/_work.scss";
+@import"sections/_whyus.scss";
+@import"sections/_contact.scss";
+@import"sections/_footer.scss";
+@import"sections/_copyright.scss";
 
 * {
     color: $dark-text-color;

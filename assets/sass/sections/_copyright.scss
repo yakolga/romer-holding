@@ -1,0 +1,38 @@
+.copyright {
+    position: relative;
+    &:before {
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: $light-text-color;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:after {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        background-color: $dark-text-color;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &__info {
+        color: $light-text-color;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 15px 0;
+
+        span {
+            color: $light-text-color;
+        }
+    }
+}

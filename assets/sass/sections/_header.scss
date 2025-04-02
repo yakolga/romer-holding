@@ -42,6 +42,7 @@
     &__menu {
         max-width: 705px;
         width: 100%;
+        transition: 0.3s transform;
         
         @media (max-width: 979px) {
             position: absolute;
@@ -124,6 +125,14 @@
     
             .header__logo {
                 max-width: 150px;
+            }
+        }
+    }
+
+    &.--open {
+        @media (max-width: 979px) {
+            .header__menu {
+                transform: translateX(0);
             }
         }
     }
