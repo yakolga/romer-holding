@@ -1,0 +1,83 @@
+.footer {
+    background-color: $dark-text-color;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: 979px) {
+        padding-top: 70px;
+        padding-bottom: 39px;
+    }
+
+    &:after {
+        content: "";
+        width: 100vw;
+        height: 100%;
+        background-color: $dark-text-color;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &__link {
+        color: $light-text-color;
+        display: flex;
+
+        span {
+            color: $light-text-color;
+        }
+
+        i {
+            color: $light-text-color;
+            width: 24px;
+            min-width: 24px;
+            margin-right: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__descr {
+        color: $light-text-color;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    &__label {
+        font-size: 24px;
+        color: $light-text-color;
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (min-width: 979px) {
+            flex-direction: row;
+            gap: 163px;
+        }
+
+        > div:first-child {
+            max-width: 457px;
+        }
+
+        > div:nth-child(2) {
+            max-width: 240px;
+        }
+    }
+}
