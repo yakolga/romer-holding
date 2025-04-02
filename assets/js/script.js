@@ -3,19 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleMobileMenu();
 
     $('.benefits__inner').slick({
-        arrows: false,
-        dots: false,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 4000,
-        cssEase: 'linear',
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        lazyLoad: 'ondemand',
-        variableWidth: true,
+      arrows: false,
+      dots: false,
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1,
+      speed: 3000,
+      cssEase: 'linear',
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      lazyLoad: 'ondemand',
+      variableWidth: true,
+      centerMode: true
     });
 
     $('.services__wrapper').slick({
