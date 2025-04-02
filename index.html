@@ -28,7 +28,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
     <link rel="stylesheet" href="assets/font/fontello.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" rel="preload"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.onload=null;this.media='all';">
     <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
@@ -143,8 +144,8 @@
                     <p class="work__descr">We take pride in every project, delivering top-quality craftsmanship, efficiency, and attention to detail. From demolitions to full-scale rebuilds, mold remediation to junk removal, our team ensures every job is completed safely and professionally. Browse our past work and see the difference we make!</p>
                 </div>
                 <div class="work__arrows">
-                    <button class="slick-prev" aria-label="Next item"><i class="icon-arrow-left"></i></button>
-                    <button class="slick-next" aria-label="Previous item"><i class="icon-arrow-right"></i></button>
+                    <button class="slick-prev slick-arrow" aria-label="Next item"><i class="icon-arrow-left"></i></button>
+                    <button class="slick-next slick-arrow" aria-label="Previous item"><i class="icon-arrow-right"></i></button>
                 </div>
             </div>
             <div class="work__images">
@@ -275,8 +276,8 @@
     </main>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-validate.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
