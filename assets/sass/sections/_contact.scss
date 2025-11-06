@@ -8,6 +8,8 @@
         margin-bottom: 120px;
         border-radius: 20px;
         padding: 57.5px 40px;
+        // margin-right: 10px;
+        // margin-left: 10px;
     }
 
     &__form {
@@ -193,9 +195,32 @@
         }
 
         @media (min-width: 979px) {
-            &-phone, &-message{
+            &-phone, &-message, &-agree {
                 grid-column-start: 1;
                 grid-column-end: 3;
+            }
+        }
+
+        &-agree {
+            display: flex;
+            flex-direction: row;
+            
+            label {
+                cursor: pointer;
+            }
+
+            input {
+                margin-right: 10px;
+                accent-color: $primary-color;
+                cursor: pointer;
+            }
+
+            #privacypolicy-error {
+                order: 1;
+                margin-top: 0;
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
             }
         }
     }
